@@ -1,23 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
+
   public static void main(String[] args) {
-    int studentAge = 15;
-    double studentGPA = 3.45;
-    String studentFirstName = "Kayla";
-    String studentLastName = "Hammon";
-    char studentFirstIntial = studentFirstName.charAt(0);
-    char studentLastIntial = studentLastName.charAt(0);
-    boolean hasPerfectAttendance = true;
+    Triangle triangleA = new Triangle(15, 8, 15, 8, 8);
+    Triangle triangleB = new Triangle(3, 2.98, 3, 3, 3);
 
-    System.out.println(studentFirstName + " " +studentLastName + " has a GPA of: " + studentGPA );
-    System.out.println("What do you want to update it to?");
+    Student studentA = new Student("Luke", "Chatelain", 2021, 1.9, "Java" );
+    studentA.badStudent();
 
-    Scanner input = new Scanner(System.in);
-    studentGPA = input.nextDouble();
 
-    System.out.println(studentFirstName + " " +studentLastName + " now has a GPA of: " + studentGPA );
-
+    System.out.println(studentA.graduationYear);
+    System.out.println(studentA.studentProfile());
 
   }
 }
